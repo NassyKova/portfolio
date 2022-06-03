@@ -5,20 +5,49 @@ $neutral1: #F0F2F2;
 $neutral2: #BDD9F2;
 
 
+
+@mixin nav () {
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                background-color: $primary2;    
+                border-radius: 20%;
+                padding: 2vw;
+                margin: 1vw;
+
+        }
+    }
+    
+}
+
+$body-font-family:'Ubuntu', sans-serif;
+$body-font-family1:'Smooch', cursive;;
+
+
+
+nav {
+    @include nav;
+}
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
-font-family: 'Smooch', cursive;
-font-family: 'Ubuntu', sans-serif;
+p {
+    text-align: center;
+}
 
 
 body {
     background-color: $neutral1;
+    font-family: $body-font-family;
+    margin: 2vw;
+
 }
 
-nav ul li {
-    list-style: none;
-    display: inline;
-} 
+h1 {
+
+}
