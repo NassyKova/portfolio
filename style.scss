@@ -1,0 +1,24 @@
+$primary1: #AEB9F2;
+$primary2: #88AABF;
+$primary3: #A7BDD9;
+$neutral1: #F0F2F2;
+$neutral2: #BDD9F2;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+font-family: 'Smooch', cursive;
+font-family: 'Ubuntu', sans-serif;
+
+
+body {
+    background-color: $neutral1;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+} 
