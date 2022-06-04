@@ -1,6 +1,7 @@
 $primary1: #AEB9F2;
 $primary2: #88AABF;
 $primary3: #A7BDD9;
+$primary4: #5b666c;
 $neutral1: #F0F2F2;
 $neutral2: #BDD9F2;
 
@@ -9,14 +10,25 @@ $neutral2: #BDD9F2;
 @mixin nav () {
         ul {
             display: flex;
+            justify-content: space-around;
             list-style: none;
-
             li {
-                background-color: $primary2;    
+                background-image: linear-gradient(to bottom right, rgba(255,0,0,0),$primary2);    
                 border-radius: 20%;
-                padding: 2vw;
+                padding: 1.5vw;
                 margin: 1vw;
-
+                font-size: 1.5em;
+                color: #35383a;
+                a{
+                    color: $primary4;
+                    text-shadow: 0.5px 0.5px $neutral2;
+                }
+        }
+        li:hover{
+            background-color: $primary2;
+        }
+        li.active{
+            background-color: $primary2;
         }
     }
     
@@ -25,7 +37,20 @@ $neutral2: #BDD9F2;
 $body-font-family:'Ubuntu', sans-serif;
 $body-font-family1:'Smooch', cursive;;
 
+.heading {
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+    color: $primary2;
+    font-size: 3em;
+    text-shadow: 0.5px 0.5px $primary4;
+}
 
+.head-image {
+    display: flex;
+    justify-content: center;
+    
+}
 
 nav {
     @include nav;
@@ -34,20 +59,67 @@ nav {
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 p {
-    text-align: center;
+    text-align: center;    
 }
 
 
 body {
-    background-color: $neutral1;
     font-family: $body-font-family;
     margin: 2vw;
+    background-image: linear-gradient(to bottom right, rgba(255,0,0,0),$primary2);
 
 }
 
-h1 {
+
+div{
+.button {
+    background-color: $primary1;
+    padding: 0.5vw;
+    border-radius: 20%;
+    border: none;
+    margin: 2vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+} 
+button:hover {
+    background-color: $primary2;
+}
+}
+
+
+h2{
+    margin: 1vw;
+    color: $primary2;
+    text-shadow: 1px 1px $primary4;
+}
+
+section.cv{
+    padding: 0.3vw;
+    font-weight: bold;
+    li {
+        margin: 0 1vw;
+}
+}
+
+footer {
+    display:flex;
+    justify-content: flex-end;
+    font-size: 0.7em;
+    letter-spacing: 0.05em;
+    color: #35383a;
+}
+
+.contact-box{
+    margin: 1rem 10rem 5rem 10rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
 }
