@@ -13,11 +13,14 @@ $neutral2: #BDD9F2;
 }
 
 
-
-
-
 $body-font-family:'Ubuntu', sans-serif;
-$body-font-family1:'Smooch', cursive;;
+$body-font-family1:'Smooch', cursive;
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 
 .heading {
     display: flex;
@@ -36,24 +39,15 @@ $body-font-family1:'Smooch', cursive;;
         margin: 10px;
         filter: opacity(20%);
     }
+    img:hover {
+        filter: opacity(100%);
+    }
     a:hover {
         transition: 0.3s;
         transform: translateY(-3px);
         filter: drop-shadow(2px 2px grey);
-        filter: opacity(100%);
-    }
-}
-
-.about-box {
-    margin: 3rem 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .head-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin-bottom: 1vw;
+    
+        // HERE
     }
 }
 
@@ -84,20 +78,7 @@ nav {
         background-color: $primary2;
     }
 }
-
 }
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-.about-box {
-    p {
-    text-align: center;    
-}
-}
-
 
 body {
     font-family: $body-font-family;
@@ -107,6 +88,22 @@ body {
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;
+}
+
+.about-box {
+    margin: 3rem 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .head-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 1vw;
+    }
+    p {
+        text-align: center;    
+    }
 }
 
 
@@ -135,10 +132,13 @@ h2{
     text-shadow: 1px 1px $primary4;
 }
 
-section.cv{
+section.cv {
     padding: 0.3vw;
     font-weight: bold;
     margin-bottom: 2vw;
+    h2 {
+        margin-top: vw;
+    }
     li {
         margin: 0 2vw;
     }
@@ -149,31 +149,44 @@ section.cv{
 
 
 .contact-box {
-        h1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+        h1 {
         text-align: center;
     }
         .contact-form {
+            width: fit-content;
             margin: 1rem 10rem 5rem 10rem;
             display: flex;
-
             flex-direction: column;
-            align-items: center;
             justify-content: flex-start;
-        #input-message{
+        
+        #input-message {
             height: 300px;
+
                     }
-        .submit-button{
-            color: $primary1;
-        }
+            }
+            form {
+                button {
+                    color: $primary1;
+                    background-color:green;
+                }
+                button:hover {
+                    color: #AEB9F2;
+                }    
+            }
+
 }
-}
+
 
 td {
     padding-left: 1vw;
 }
 
 div.blog-post {
-    border: 2 px dotted red;
+    border: 2px dotted red;
+    // HERE
     h2{
         text-shadow:none;
             }
@@ -191,15 +204,11 @@ div.blog-post {
         border-radius: 25%;
         }
         p {
-            margin: 1vw;
-            text-align: left;
         }
         img:hover {
         @include hover_img;
         }
-        p {
-            
-        }
+
     }
 
 footer {

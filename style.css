@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .heading {
   display: flex;
   justify-content: center;
@@ -16,24 +21,13 @@
   margin: 10px;
   filter: opacity(20%);
 }
+.nav-social img:hover {
+  filter: opacity(100%);
+}
 .nav-social a:hover {
   transition: 0.3s;
   transform: translateY(-3px);
   filter: drop-shadow(2px 2px grey);
-  filter: opacity(100%);
-}
-
-.about-box {
-  margin: 3rem 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about-box .head-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  margin-bottom: 1vw;
 }
 
 nav ul {
@@ -61,15 +55,6 @@ nav ul li.active {
   background-color: #88AABF;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-.about-box p {
-  text-align: center;
-}
-
 body {
   font-family: "Ubuntu", sans-serif;
   margin: 2vw;
@@ -78,6 +63,22 @@ body {
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
+}
+
+.about-box {
+  margin: 3rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-box .head-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 1vw;
+}
+.about-box p {
+  text-align: center;
 }
 
 div form {
@@ -107,6 +108,9 @@ section.cv {
   font-weight: bold;
   margin-bottom: 2vw;
 }
+section.cv h2 {
+  margin-top: vw;
+}
 section.cv li {
   margin: 0 2vw;
 }
@@ -114,20 +118,29 @@ section.cv p {
   margin: 0 1vw;
 }
 
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .contact-box h1 {
   text-align: center;
 }
 .contact-box .contact-form {
+  width: fit-content;
   margin: 1rem 10rem 5rem 10rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
 }
 .contact-box .contact-form #input-message {
   height: 300px;
 }
-.contact-box .contact-form .submit-button {
+.contact-box form button {
+  color: #AEB9F2;
+  background-color: green;
+}
+.contact-box form button:hover {
   color: #AEB9F2;
 }
 
@@ -136,7 +149,7 @@ td {
 }
 
 div.blog-post {
-  border: 2 px dotted red;
+  border: 2px dotted red;
 }
 div.blog-post h2 {
   text-shadow: none;
@@ -154,15 +167,12 @@ div.blog-post img {
   width: 200px;
   border-radius: 25%;
 }
-div.blog-post p {
-  margin: 1vw;
-  text-align: left;
-}
 div.blog-post img:hover {
   opacity: 40%;
   transition: 0.3s;
   transform: scale(1.1);
 }
+
 footer {
   display: flex;
   justify-content: flex-end;
