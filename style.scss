@@ -6,33 +6,15 @@ $neutral1: #F0F2F2;
 $neutral2: #BDD9F2;
 
 
-
-@mixin nav () {
-        ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            li {
-                background-image: linear-gradient(to bottom right, rgba(255,0,0,0),$primary2);    
-                border-radius: 20%;
-                padding: 1.5vw;
-                margin: 1vw;
-                font-size: 1.5em;
-                color: #35383a;
-                a{
-                    color: $primary4;
-                    text-shadow: 0.5px 0.5px $neutral2;
-                }
-        }
-        li:hover{
-            background-color: $primary2;
-        }
-        li.active{
-            background-color: $primary2;
-        }
-    }
-    
+@mixin hover_img {
+    opacity: 40%;
+    transition: 0.3s;
+    transform: scale(1.1);
 }
+
+
+
+
 
 $body-font-family:'Ubuntu', sans-serif;
 $body-font-family1:'Smooch', cursive;;
@@ -46,36 +28,92 @@ $body-font-family1:'Smooch', cursive;;
     text-shadow: 0.5px 0.5px $primary4;
 }
 
-.head-image {
+.nav-social {
     display: flex;
-    justify-content: center;
-    
+    margin: 1vw;
+    img {
+        width: 40px;
+        margin: 10px;
+        filter: opacity(20%);
+    }
+    a:hover {
+        transition: 0.3s;
+        transform: translateY(-3px);
+        filter: drop-shadow(2px 2px grey);
+        filter: opacity(100%);
+    }
+}
+
+.about-box {
+    margin: 3rem 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .head-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 1vw;
+    }
 }
 
 nav {
-    @include nav;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        li {
+            border-radius: 20%;
+            padding: 1.5vw;
+            margin: 1vw;
+            font-size: 1.5em;
+            color: #35383a;
+            
+
+            a{
+                color: $primary4;
+                text-shadow: 0.5px 0.5px $neutral2;
+                text-decoration: none;
+            }
+    }
+    li:hover{
+        background-color: $primary2;
+        transition: 0.3s;
+        }
+    li.active{
+        background-color: $primary2;
+    }
+}
+
 }
 
 * {
     margin: 0px;
     padding: 0px;
-    
 }
 
-p {
+.about-box {
+    p {
     text-align: center;    
+}
 }
 
 
 body {
     font-family: $body-font-family;
     margin: 2vw;
+    min-height: calc(100vh - 4vw);
     background-image: linear-gradient(to bottom right, rgba(255,0,0,0),$primary2);
-
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 div{
+    form {
+        display: flex;
+        justify-content: flex-end;
 .button {
     background-color: $primary1;
     padding: 0.5vw;
@@ -83,8 +121,7 @@ div{
     border: none;
     margin: 2vw;
     cursor: pointer;
-    display: flex;
-    justify-content: flex-end;
+}
 } 
 button:hover {
     background-color: $primary2;
@@ -101,25 +138,75 @@ h2{
 section.cv{
     padding: 0.3vw;
     font-weight: bold;
+    margin-bottom: 2vw;
     li {
-        margin: 0 1vw;
+        margin: 0 2vw;
+    }
+    p {
+        margin: 0 1vw;   
+    }
+}
+
+
+.contact-box {
+        h1{
+        text-align: center;
+    }
+        .contact-form {
+            margin: 1rem 10rem 5rem 10rem;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        #input-message{
+            height: 300px;
+                    }
+        .submit-button{
+            color: $primary1;
+        }
 }
 }
+
+td {
+    padding-left: 1vw;
+}
+
+div.blog-post {
+    border: 2 px dotted red;
+    h2{
+        text-shadow:none;
+            }
+            h5 {
+                font-size: 0.7em;
+                color: #5b666c;
+                margin: 1vw;
+                border: 2 px dotted;
+            }
+    .picture-post { 
+    display: flex;
+    }
+        img {
+        width: 200px;
+        border-radius: 25%;
+        }
+        p {
+            margin: 1vw;
+            text-align: left;
+        }
+        img:hover {
+        @include hover_img;
+        }
+        p {
+            
+        }
+    }
 
 footer {
-    display:flex;
-    justify-content: flex-end;
-    font-size: 0.7em;
-    letter-spacing: 0.05em;
-    color: #35383a;
-}
-
-.contact-box{
-    margin: 1rem 10rem 5rem 10rem;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
+        display:flex;
+        justify-content: flex-end;
+        font-size: 0.7em;
+        letter-spacing: 0.05em;
+        color: #35383a;
+        margin-top: auto;
 }
