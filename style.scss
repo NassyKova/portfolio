@@ -1,3 +1,5 @@
+// color pallete 
+
 $primary1: #AEB9F2;
 $primary2: #88AABF;
 $primary3: #A7BDD9;
@@ -5,14 +7,14 @@ $primary4: #5b666c;
 $neutral1: #F0F2F2;
 $neutral2: #BDD9F2;
 
-
+// hover image rules
 @mixin hover_img {
     opacity: 40%;
     transition: 0.3s;
     transform: scale(1.1);
 }
 
-
+// used font
 $body-font-family:'Ubuntu', sans-serif;
 $body-font-family1:'Smooch', cursive;
 
@@ -21,7 +23,7 @@ $body-font-family1:'Smooch', cursive;
     padding: 0px;
 }
 
-
+// Heading section, social links
 .heading {
     display: flex;
     justify-content: center;
@@ -46,12 +48,29 @@ $body-font-family1:'Smooch', cursive;
         transition: 0.3s;
         transform: translateY(-3px);
         filter: drop-shadow(2px 2px grey);
-    
-        // HERE
     }
 }
 
-nav {
+// Navigation menu
+
+// Hamburger menu icon
+    label {
+        color: $primary4;
+        width: 20px;
+        float: right;
+        margin: 0 2vw 0vw 0vw;
+        font-size: 30px;
+        line-height: 1.5rem;
+        display: none;
+        @media only screen and (max-width: 720px) {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        }
+    }  
+
+
+.menu {
     ul {
         display: flex;
         justify-content: space-around;
@@ -74,12 +93,41 @@ nav {
         background-color: $primary2;
         transition: 0.3s;
         }
-    li.active{
+    li.current-link{
         background-color: $primary2;
+    }
+    
+    // HERE!!!!
+  // Drop down menu on smaller screens
+    @media only screen and (max-width: 720px) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: $primary1;
+        text-align: center;
+        width: 100%;
+        display: none;
+        ul {
+            display: block;
+            padding: 1rem;
+            margin-top: 1rem;
+            color: $primary2;
+        }
     }
 }
 }
 
+#checkbox-toggle {
+    display: none;
+}
+
+#checkbox-toggle:checked + .menu-items {
+    display: block;
+}
+
+
+
+// background color and size
 body {
     font-family: $body-font-family;
     margin: 2vw;
@@ -90,6 +138,7 @@ body {
     flex-direction: column;
 }
 
+// Index page, about me
 .about-box {
     margin: 3vw 15vw;
     display: flex;
@@ -122,7 +171,8 @@ body {
     }
 }
 
-
+// CV 
+// download as pdf
 div{
     form {
         display: flex;
@@ -141,13 +191,14 @@ button:hover {
 }
 }
 
-
 h2{
     margin: 1vw;
     color: $primary2;
     text-shadow: 1px 1px $primary4;
 }
 
+
+// CV
 section.cv {
     padding: 0.3vw;
     margin-bottom: 2vw;
@@ -162,7 +213,13 @@ section.cv {
     }
 }
 
+// table rules
+td {
+    padding-left: 1vw;
+}
 
+
+// contact me page
 .contact-box {
     display: flex;
     align-items: center;
@@ -183,11 +240,8 @@ section.cv {
             @media screen and (max-width: 800px) {
                 width: 60%;
             }
-        
-        #input-message {
+            #input-message {
             height: 300px;
-            
-
                     }
             }
             form {
@@ -209,19 +263,13 @@ section.cv {
                     color: #AEB9F2;
                 }    
             }
-
 }
 
-
-td {
-    padding-left: 1vw;
-}
-
+// Blog
 div.blog-post {
     border: 2px dotted $primary1;
     padding: 1vw;
     margin: 0.5vw;
-    // HERE
     h2{
         text-shadow:none;
             }
@@ -241,13 +289,11 @@ div.blog-post {
         @media screen and (max-width: 600px) {
             width: 40%;    
             object-fit: contain;
-
         }
     
         @media screen and (max-width: 800px) {
             width: 30%;    
             object-fit: contain;
-
         }
         }
         p {
@@ -259,6 +305,8 @@ div.blog-post {
 
     }
 
+
+    // Footer, copyright sign
 footer {
         display:flex;
         justify-content: flex-end;

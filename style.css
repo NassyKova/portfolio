@@ -30,29 +30,71 @@
   filter: drop-shadow(2px 2px grey);
 }
 
-nav ul {
+label {
+  color: #5b666c;
+  width: 20px;
+  float: right;
+  margin: 0 2vw 0vw 0vw;
+  font-size: 30px;
+  line-height: 1.5rem;
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.menu ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
-nav ul li {
+.menu ul li {
   border-radius: 20%;
   padding: 1.5vw;
   margin: 1vw;
   font-size: 1.5em;
   color: #35383a;
 }
-nav ul li a {
+.menu ul li a {
   color: #5b666c;
   text-shadow: 0.5px 0.5px #BDD9F2;
   text-decoration: none;
 }
-nav ul li:hover {
+.menu ul li:hover {
   background-color: #88AABF;
   transition: 0.3s;
 }
-nav ul li.active {
+.menu ul li.current-link {
   background-color: #88AABF;
+}
+@media only screen and (max-width: 720px) {
+  .menu ul {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #AEB9F2;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .menu ul ul {
+    display: block;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #88AABF;
+  }
+}
+
+#checkbox-toggle {
+  display: none;
+}
+
+#checkbox-toggle:checked + .menu-items {
+  display: block;
 }
 
 body {
@@ -134,6 +176,10 @@ section.cv p {
   margin: 0 1vw;
 }
 
+td {
+  padding-left: 1vw;
+}
+
 .contact-box {
   display: flex;
   align-items: center;
@@ -178,10 +224,6 @@ section.cv p {
 }
 .contact-box form button:hover {
   color: #AEB9F2;
-}
-
-td {
-  padding-left: 1vw;
 }
 
 div.blog-post {
