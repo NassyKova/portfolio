@@ -100,7 +100,8 @@ $body-font-family1:'Smooch', cursive;
     // HERE!!!!
   // Drop down menu on smaller screens
     @media only screen and (max-width: 720px) {
-        position: fixed;
+        position: relative;
+        display: block;
         left: 0;
         top: 0;
         background-color: $primary1;
@@ -108,11 +109,12 @@ $body-font-family1:'Smooch', cursive;
         width: 100%;
         display: none;
         ul {
-            display: block;
             padding: 1rem;
             margin-top: 1rem;
             color: $primary2;
         }
+        #checkbox-toggle + .menu-items {
+            display:none}
     }
 }
 }
@@ -124,6 +126,7 @@ $body-font-family1:'Smooch', cursive;
 #checkbox-toggle:checked + .menu-items {
     display: block;
 }
+
 
 
 
@@ -270,22 +273,28 @@ div.blog-post {
     border: 2px dotted $primary1;
     padding: 1vw;
     margin: 0.5vw;
+    a:link {
+        text-decoration: none;
+    }
     h2{
-        text-shadow:none;
+        text-shadow: none;
+        text-decoration: none;
             }
             h5 {
-            
                 font-size: 0.7em;
                 color: #5b666c;
                 margin: 1vw;
-                border: 2 px dotted;
             }
     .picture-post { 
     display: flex;
-    }
         img {
         width: 200px;
         border-radius: 25%;
+        p {
+            padding: 0.5vw;
+            color: black;
+        }
+
         @media screen and (max-width: 600px) {
             width: 40%;    
             object-fit: contain;
@@ -298,13 +307,88 @@ div.blog-post {
         }
         p {
             padding: 0.5vw;
+            color: black;
         }
         img:hover {
         @include hover_img;
         }
+    }
+}
 
+div.blog-post1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 2em;
+    }
+    h5 {
+        font-size: 0.7em;
+        color: #5b666c;
+        margin: 1vw;
     }
 
+.picture-post1 {
+
+    }
+    img {
+ 
+        margin: 0vw 20vw 5vw 20vw;
+    }
+    p {
+        padding: 0.5vw;
+        margin: 0vw 20vw 5vw 20vw;
+
+    }
+}
+
+.comment-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2vw;
+        h1 {
+        text-align: center;
+    }
+        .contact-form {
+            width: 30%;
+            margin: 1rem 5rem 5rem 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            @media screen and (max-width: 600px) {
+                width: 60%;
+            }
+        
+            @media screen and (max-width: 800px) {
+                width: 60%;
+            }
+            #input-message {
+            height: 100px;
+                    }
+            }
+            form {
+                button {
+                    
+                    background-color: $primary1;
+                    margin: 1em 0em;
+                
+                    @media screen and (max-width: 600px) {
+                        height: 50px;
+                    }
+                
+                    @media screen and (max-width: 800px) {
+                        height: 50px;
+                    }
+
+                }
+                button:hover {
+                    color: #AEB9F2;
+                }    
+            }
+}
 
     // Footer, copyright sign
 footer {

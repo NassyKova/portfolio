@@ -73,7 +73,8 @@ label {
 }
 @media only screen and (max-width: 720px) {
   .menu ul {
-    position: fixed;
+    position: relative;
+    display: block;
     left: 0;
     top: 0;
     background-color: #AEB9F2;
@@ -82,10 +83,12 @@ label {
     display: none;
   }
   .menu ul ul {
-    display: block;
     padding: 1rem;
     margin-top: 1rem;
     color: #88AABF;
+  }
+  .menu ul #checkbox-toggle + .menu-items {
+    display: none;
   }
 }
 
@@ -231,41 +234,118 @@ div.blog-post {
   padding: 1vw;
   margin: 0.5vw;
 }
+div.blog-post a:link {
+  text-decoration: none;
+}
 div.blog-post h2 {
   text-shadow: none;
+  text-decoration: none;
 }
 div.blog-post h5 {
   font-size: 0.7em;
   color: #5b666c;
   margin: 1vw;
-  border: 2 px dotted;
 }
 div.blog-post .picture-post {
   display: flex;
 }
-div.blog-post img {
+div.blog-post .picture-post img {
   width: 200px;
   border-radius: 25%;
 }
+div.blog-post .picture-post img p {
+  padding: 0.5vw;
+  color: black;
+}
 @media screen and (max-width: 600px) {
-  div.blog-post img {
+  div.blog-post .picture-post img {
     width: 40%;
     object-fit: contain;
   }
 }
 @media screen and (max-width: 800px) {
-  div.blog-post img {
+  div.blog-post .picture-post img {
     width: 30%;
     object-fit: contain;
   }
 }
-div.blog-post p {
+div.blog-post .picture-post p {
   padding: 0.5vw;
+  color: black;
 }
-div.blog-post img:hover {
+div.blog-post .picture-post img:hover {
   opacity: 40%;
   transition: 0.3s;
   transform: scale(1.1);
+}
+
+div.blog-post1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.blog-post1 h2 {
+  font-size: 2em;
+}
+div.blog-post1 h5 {
+  font-size: 0.7em;
+  color: #5b666c;
+  margin: 1vw;
+}
+div.blog-post1 img {
+  margin: 0vw 20vw 5vw 20vw;
+}
+div.blog-post1 p {
+  padding: 0.5vw;
+  margin: 0vw 20vw 5vw 20vw;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2vw;
+}
+.comment-box h1 {
+  text-align: center;
+}
+.comment-box .contact-form {
+  width: 30%;
+  margin: 1rem 5rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .comment-box .contact-form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .comment-box .contact-form {
+    width: 60%;
+  }
+}
+.comment-box .contact-form #input-message {
+  height: 100px;
+}
+.comment-box form button {
+  background-color: #AEB9F2;
+  margin: 1em 0em;
+}
+@media screen and (max-width: 600px) {
+  .comment-box form button {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .comment-box form button {
+    height: 50px;
+  }
+}
+.comment-box form button:hover {
+  color: #AEB9F2;
 }
 
 footer {
