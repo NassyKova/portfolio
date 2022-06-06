@@ -66,10 +66,20 @@ body {
 }
 
 .about-box {
-  margin: 3rem 15rem;
+  margin: 3vw 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .about-box {
+    margin: 3vw 2vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about-box {
+    margin: 3vw 3vw;
+  }
 }
 .about-box .head-image {
   width: 300px;
@@ -78,7 +88,14 @@ body {
   margin-bottom: 1vw;
 }
 .about-box p {
+  margin: 1em;
   text-align: center;
+}
+.about-box #link {
+  color: #5b666c;
+}
+.about-box #link:hover {
+  background-color: #88AABF;
 }
 
 div form {
@@ -105,7 +122,6 @@ h2 {
 
 section.cv {
   padding: 0.3vw;
-  font-weight: bold;
   margin-bottom: 2vw;
 }
 section.cv h2 {
@@ -127,18 +143,38 @@ section.cv p {
   text-align: center;
 }
 .contact-box .contact-form {
-  width: fit-content;
-  margin: 1rem 10rem 5rem 10rem;
+  width: 30%;
+  margin: 1rem 5rem 5rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .contact-box .contact-form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-box .contact-form {
+    width: 60%;
+  }
 }
 .contact-box .contact-form #input-message {
   height: 300px;
 }
 .contact-box form button {
-  color: #AEB9F2;
-  background-color: green;
+  background-color: #AEB9F2;
+  margin: 1em 0em;
+}
+@media screen and (max-width: 600px) {
+  .contact-box form button {
+    height: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-box form button {
+    height: 50px;
+  }
 }
 .contact-box form button:hover {
   color: #AEB9F2;
@@ -149,7 +185,9 @@ td {
 }
 
 div.blog-post {
-  border: 2px dotted red;
+  border: 2px dotted #AEB9F2;
+  padding: 1vw;
+  margin: 0.5vw;
 }
 div.blog-post h2 {
   text-shadow: none;
@@ -166,6 +204,21 @@ div.blog-post .picture-post {
 div.blog-post img {
   width: 200px;
   border-radius: 25%;
+}
+@media screen and (max-width: 600px) {
+  div.blog-post img {
+    width: 40%;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 800px) {
+  div.blog-post img {
+    width: 30%;
+    object-fit: contain;
+  }
+}
+div.blog-post p {
+  padding: 0.5vw;
 }
 div.blog-post img:hover {
   opacity: 40%;
