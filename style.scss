@@ -7,6 +7,14 @@ $primary4: #5b666c;
 $neutral1: #F0F2F2;
 $neutral2: #BDD9F2;
 
+// flex all center
+@mixin column_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 // hover image rules
 @mixin hover_img {
     opacity: 40%;
@@ -56,10 +64,10 @@ $body-font-family1:'Smooch', cursive;
 // Hamburger menu icon
     label {
         color: $primary4;
-        width: 20px;
+
         float: right;
-        margin: 0 2vw 0vw 0vw;
-        font-size: 30px;
+        margin: 0 1vw 1vw 0vw;
+        font-size: 70px;
         line-height: 1.5rem;
         display: none;
         @media only screen and (max-width: 720px) {
@@ -108,13 +116,11 @@ $body-font-family1:'Smooch', cursive;
         text-align: center;
         width: 100%;
         display: none;
+
         ul {
             padding: 1rem;
             margin-top: 1rem;
             color: $primary2;
-        }
-        #checkbox-toggle + .menu-items {
-            display:none}
     }
 }
 }
@@ -126,7 +132,9 @@ $body-font-family1:'Smooch', cursive;
 #checkbox-toggle:checked + .menu-items {
     display: block;
 }
-
+}
+#checkbox-toggle + .menu-items {
+    display:none}
 
 
 
@@ -160,10 +168,20 @@ body {
     height: 300px;
     border-radius: 50%;
     margin-bottom: 1vw;
+
+    @media screen and (max-width: 600px) {
+        width: 200px;
+        height: 200px;
     }
+    }
+
     p {
         margin: 1em;
-        text-align: center;    
+        text-align: center; 
+        
+        @media screen and (max-width: 800px) {
+        font-size: 2em;
+        }
     }
     #link {
         color: $primary4;
@@ -172,6 +190,7 @@ body {
         background-color: $primary2;
     
     }
+
 }
 
 // CV 
@@ -224,11 +243,8 @@ td {
 
 // contact me page
 .contact-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+@include column_center;
         h1 {
-        text-align: center;
     }
         .contact-form {
             width: 30%;
@@ -249,9 +265,9 @@ td {
             }
             form {
                 button {
-                    
                     background-color: $primary1;
                     margin: 1em 0em;
+                    height: 30px;
                 
                     @media screen and (max-width: 600px) {
                         height: 50px;
@@ -260,10 +276,9 @@ td {
                     @media screen and (max-width: 800px) {
                         height: 50px;
                     }
-
                 }
                 button:hover {
-                    color: #AEB9F2;
+                    background-color: $primary2;
                 }    
             }
 }
@@ -291,7 +306,6 @@ div.blog-post {
         width: 200px;
         border-radius: 25%;
         p {
-            padding: 0.5vw;
             color: black;
         }
 
@@ -316,10 +330,7 @@ div.blog-post {
 }
 
 div.blog-post1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include column_center;
 
     h2 {
         font-size: 2em;
@@ -329,19 +340,23 @@ div.blog-post1 {
         color: #5b666c;
         margin: 1vw;
     }
+    .picture-post1 {
+        @include column_center;
+        img {
+        width: 20%;
+        @media screen and (max-width: 600px) {
+            width: 60%;
+        }
 
-.picture-post1 {
-
-    }
-    img {
- 
-        margin: 0vw 20vw 5vw 20vw;
+        @media screen and (max-width: 800px) {
+            width: 60%;
+        }
     }
     p {
         padding: 0.5vw;
-        margin: 0vw 20vw 5vw 20vw;
-
+        margin: 1vw 20vw 1vw 20vw;
     }
+}
 }
 
 .comment-box {

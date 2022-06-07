@@ -32,10 +32,9 @@
 
 label {
   color: #5b666c;
-  width: 20px;
   float: right;
-  margin: 0 2vw 0vw 0vw;
-  font-size: 30px;
+  margin: 0 1vw 1vw 0vw;
+  font-size: 70px;
   line-height: 1.5rem;
   display: none;
 }
@@ -87,17 +86,16 @@ label {
     margin-top: 1rem;
     color: #88AABF;
   }
-  .menu ul #checkbox-toggle + .menu-items {
-    display: none;
-  }
 }
-
-#checkbox-toggle {
+.menu #checkbox-toggle {
   display: none;
 }
-
-#checkbox-toggle:checked + .menu-items {
+.menu #checkbox-toggle:checked + .menu-items {
   display: block;
+}
+
+#checkbox-toggle + .menu-items {
+  display: none;
 }
 
 body {
@@ -132,9 +130,20 @@ body {
   border-radius: 50%;
   margin-bottom: 1vw;
 }
+@media screen and (max-width: 600px) {
+  .about-box .head-image {
+    width: 200px;
+    height: 200px;
+  }
+}
 .about-box p {
   margin: 1em;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .about-box p {
+    font-size: 2em;
+  }
 }
 .about-box #link {
   color: #5b666c;
@@ -185,11 +194,9 @@ td {
 
 .contact-box {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-.contact-box h1 {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .contact-box .contact-form {
   width: 30%;
@@ -214,6 +221,7 @@ td {
 .contact-box form button {
   background-color: #AEB9F2;
   margin: 1em 0em;
+  height: 30px;
 }
 @media screen and (max-width: 600px) {
   .contact-box form button {
@@ -226,7 +234,7 @@ td {
   }
 }
 .contact-box form button:hover {
-  color: #AEB9F2;
+  background-color: #88AABF;
 }
 
 div.blog-post {
@@ -254,7 +262,6 @@ div.blog-post .picture-post img {
   border-radius: 25%;
 }
 div.blog-post .picture-post img p {
-  padding: 0.5vw;
   color: black;
 }
 @media screen and (max-width: 600px) {
@@ -293,12 +300,28 @@ div.blog-post1 h5 {
   color: #5b666c;
   margin: 1vw;
 }
-div.blog-post1 img {
-  margin: 0vw 20vw 5vw 20vw;
+div.blog-post1 .picture-post1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-div.blog-post1 p {
+div.blog-post1 .picture-post1 img {
+  width: 20%;
+}
+@media screen and (max-width: 600px) {
+  div.blog-post1 .picture-post1 img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  div.blog-post1 .picture-post1 img {
+    width: 60%;
+  }
+}
+div.blog-post1 .picture-post1 p {
   padding: 0.5vw;
-  margin: 0vw 20vw 5vw 20vw;
+  margin: 1vw 20vw 1vw 20vw;
 }
 
 .comment-box {
