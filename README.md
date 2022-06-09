@@ -2,6 +2,7 @@
 
 ## Website URL
 [Website Link](https://harmonious-vacherin-ab1779.netlify.app/)
+
 [GitHub Repository is here](https://github.com/purplebus/portfolio)
 
 ## Purpose
@@ -80,19 +81,23 @@ Potentual employers, tech communities
 ### Mobile Version
 
 **About Me** 
+
 ![About Me](docs/Mobile_AboutMe.png)
 
 **Blog** 
 
-![Blog](docs/Mobile_Blog.png
+![Blog](docs/Mobile_Blog.png)
 
 **Blog_Post** 
+
 ![Blog_Post](docs/Mobile_Blog_Post.png)
 
 **CV** 
+
 ![CV](docs/Mobile_CV.png)
 
 **Contact Me** 
+
 ![Contact Me](docs/Mobile_Contact.png)
 
 

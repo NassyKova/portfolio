@@ -1,17 +1,14 @@
+/* // color pallete  */
+/* // flex all center */
+/* // hover image rules */
+/* // used font */
 * {
   margin: 0px;
   padding: 0px;
 }
 
-.heading {
-  display: flex;
-  justify-content: center;
-  margin: 1vw;
-  color: #88AABF;
-  font-size: 3em;
-  text-shadow: 0.5px 0.5px #5b666c;
-}
-
+/* Navigation menu */
+/* Social links */
 .nav-social {
   display: flex;
   margin: 1vw;
@@ -30,26 +27,21 @@
   filter: drop-shadow(2px 2px grey);
 }
 
-label {
-  color: #5b666c;
-  float: right;
-  margin: 0 1vw 1vw 0vw;
-  font-size: 70px;
-  line-height: 1.5rem;
-  display: none;
-}
-@media only screen and (max-width: 720px) {
-  label {
-    display: block;
-    position: relative;
-    cursor: pointer;
-  }
+/* Heading section */
+.heading {
+  display: flex;
+  justify-content: center;
+  margin: 1vw;
+  color: #88AABF;
+  font-size: 3em;
+  text-shadow: 0.5px 0.5px #5b666c;
 }
 
 .menu ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  /*         Drop down menu on smaller screens */
 }
 .menu ul li {
   border-radius: 20%;
@@ -79,23 +71,48 @@ label {
     background-color: #AEB9F2;
     text-align: center;
     width: 100%;
-    display: none;
   }
-  .menu ul ul {
-    padding: 1rem;
-    margin-top: 1rem;
-    color: #88AABF;
+  .menu ul a {
+    font-size: 3em;
   }
-}
-.menu #checkbox-toggle {
-  display: none;
-}
-.menu #checkbox-toggle:checked + .menu-items {
-  display: block;
+  .menu ul .current-link {
+    font-size: 5em;
+  }
+  .menu ul li {
+    border-radius: 0%;
+  }
 }
 
-#checkbox-toggle + .menu-items {
+/* // Hamburger menu icon */
+#hamburger-menu-label {
   display: none;
+}
+@media only screen and (max-width: 720px) {
+  #hamburger-menu-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    z-index: 200;
+    color: #5b666c;
+    float: right;
+    margin: 0 1vw 1vw 0vw;
+    font-size: 70px;
+    line-height: 1.5rem;
+  }
+}
+
+#checkbox-toggle {
+  display: none;
+}
+
+.menu-items {
+  display: none;
+}
+
+#checkbox-toggle:checked + .menu-items {
+  display: block;
+  position: fixed;
+  width: 96%;
 }
 
 body {
@@ -106,6 +123,16 @@ body {
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
+}
+
+/* Footer, copyright sign */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7em;
+  letter-spacing: 0.05em;
+  color: #35383a;
+  margin-top: auto;
 }
 
 .about-box {
@@ -152,6 +179,8 @@ body {
   background-color: #88AABF;
 }
 
+/* CV 
+download as pdf */
 div form {
   display: flex;
   justify-content: flex-end;
@@ -369,15 +398,6 @@ div.blog-post1 .picture-post1 p {
 }
 .comment-box form button:hover {
   color: #AEB9F2;
-}
-
-footer {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 0.7em;
-  letter-spacing: 0.05em;
-  color: #35383a;
-  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

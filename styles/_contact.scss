@@ -1,0 +1,46 @@
+// contact me page
+.contact-box {
+    @include column_center;
+
+    h1 {}
+
+    .contact-form {
+        width: 30%;
+        margin: 1rem 5rem 5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 600px) {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 800px) {
+            width: 60%;
+        }
+
+        #input-message {
+            height: 300px;
+        }
+    }
+
+    form {
+        button {
+            background-color: $primary1;
+            margin: 1em 0em;
+            height: 30px;
+
+            @media screen and (max-width: 600px) {
+                height: 50px;
+            }
+
+            @media screen and (max-width: 800px) {
+                height: 50px;
+            }
+        }
+
+        button:hover {
+            background-color: $primary2;
+        }
+    }
+}
