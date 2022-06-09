@@ -93,8 +93,11 @@
 
 #hamburger-menu-label {
     display: none;
+}
 
     @media only screen and (max-width: 720px) {
+        
+        #hamburger-menu-label {
         display: block;
         position: relative;
         cursor: pointer;
@@ -104,19 +107,19 @@
         margin: 0 1vw 1vw 0vw;
         font-size: 70px;
         line-height: 1.5rem;
+        }
+        .menu-items {
+            display: none;
+        }
+        #checkbox-toggle:checked+.menu-items {
+            display: block;
+            position: fixed;
+            width: 96%;
+        }
+        
     }
-}
+
 
 #checkbox-toggle {
     display: none;
-}
-
-.menu-items {
-    display: none;
-}
-
-#checkbox-toggle:checked+.menu-items {
-    display: block;
-    position: fixed;
-    width: 96%;
 }
