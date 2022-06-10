@@ -37,6 +37,20 @@
   text-shadow: 0.5px 0.5px #5b666c;
 }
 
+.menu div.current-page {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 25%;
+  margin: 3vw 25vw 0vw 25vw;
+  font-size: 3em;
+  color: #35383a;
+  background-color: #88AABF;
+}
+@media only screen and (min-width: 721px) {
+  .menu div.current-page {
+    display: none;
+  }
+}
 .menu ul {
   display: flex;
   justify-content: space-around;
@@ -89,6 +103,10 @@
 }
 
 @media only screen and (max-width: 720px) {
+  .menu-items {
+    display: none;
+  }
+
   #hamburger-menu-label {
     display: block;
     position: relative;
@@ -101,8 +119,8 @@
     line-height: 1.5rem;
   }
 
-  .menu-items {
-    display: none;
+  .current-link {
+    display: block;
   }
 
   #checkbox-toggle:checked + .menu-items {

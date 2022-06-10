@@ -35,6 +35,20 @@
 // Navigation menu
 .menu {
 
+    div.current-page {
+        display: flex;
+        justify-content: space-around;
+        border-radius: 25%;
+        margin: 3vw 25vw 0vw 25vw;
+        font-size: 3em;
+        color: #35383a;
+        background-color: $primary2;
+
+        @media only screen and (min-width: 721px) {
+            display: none;
+        }
+    }
+
     ul {
         display: flex;
         justify-content: space-around;
@@ -80,14 +94,14 @@
             .current-link {
                 font-size: 5em;
             }
-            
-            li {
-            border-radius: 0%;
-            }
 
+            li {
+                border-radius: 0%;
+            }
         }
     }
 }
+
 
 /* // Hamburger menu icon */
 
@@ -95,9 +109,12 @@
     display: none;
 }
 
-    @media only screen and (max-width: 720px) {
-        
-        #hamburger-menu-label {
+@media only screen and (max-width: 720px) {
+    .menu-items {
+        display: none;
+    }
+
+    #hamburger-menu-label {
         display: block;
         position: relative;
         cursor: pointer;
@@ -107,17 +124,20 @@
         margin: 0 1vw 1vw 0vw;
         font-size: 70px;
         line-height: 1.5rem;
-        }
-        .menu-items {
-            display: none;
-        }
-        #checkbox-toggle:checked+.menu-items {
-            display: block;
-            position: fixed;
-            width: 96%;
-        }
-        
     }
+
+    .current-link {
+        display: block;
+
+    }
+
+    #checkbox-toggle:checked+.menu-items {
+        display: block;
+        position: fixed;
+        width: 96%;
+    }
+
+}
 
 
 #checkbox-toggle {
