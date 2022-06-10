@@ -16,7 +16,7 @@ Website contains information about my skills, current CV, social links
 
 ### Overview
 The site has 9 pages. 4 main pages and 5 blog pages
-![Portfolio Map](docs/Portfolio.map.png)
+![Portfolio Map](docs/portfolio.map.png)
 
 ### Components
 - Each page has a **navigation bar**. There are links to social media, name of the site and the main menu. on the smalller screens the main menu changes to sandwich menu.
@@ -37,6 +37,9 @@ The site has 9 pages. 4 main pages and 5 blog pages
 #### Desktop version
 ![Desktop Verions](docs/wireframes_1.png)
 ![Desktop Verions](docs/wireframes_2.png)
+
+#### Tablet Version
+![Tablet version](docs/tablet_wireframes.png)
 
 #### Mobile Version
 ![Mobile version](docs/wireframes_mobile.png)
@@ -63,42 +66,65 @@ Potentual employers, tech communities
 ### Desktop screenshots
 
 **About Me** 
-![About Me](docs/Desktop_AboutMe.png)
+![About Me](docs/desktop_AboutMe.png)
 
 **Blog** 
 
-![Blog](docs/Desktop_Blog.png)
+![Blog](docs/desktop_Blog.png)
 
-**Blog_Post** 
-![Blog_Post](docs/Desktop_Blog_post.png)
+**Blog Post** 
+![Blog Post](docs/desktop_Blog_post.png)
 
 **CV** 
-![CV](docs/Desktop_CV.png)
+![CV](docs/desktop_CV.png)
 
 **Contact Me** 
-![Contact Me](docs/Desktop_Contact_Me.png)
+![Contact Me](docs/desktop_Contact_Me.png)
+
+### Tablet Version
+
+**About Me** 
+
+![About Me](docs/tablet_AboutMe.png)
+
+**Blog** 
+
+![Blog](docs/tablet_Blog.png)
+
+**Blog Post** 
+
+![Blog Post](docs/tablet_BlogPost.png)
+
+**CV** 
+
+![CV](docs/tablet_CV.png)
+
+**Contact Me** 
+
+![Contact Me](docs/tablet_ContactMe.png)
+
 
 ### Mobile Version
 
 **About Me** 
 
-![About Me](docs/Mobile_AboutMe.png)
+![About Me](docs/mobile_AboutMe.png)
 
 **Blog** 
 
-![Blog](docs/Mobile_Blog.png)
+![Blog](docs/mobile_Blog.png)
 
-**Blog_Post** 
+**Blog Post** 
 
-![Blog_Post](docs/Mobile_Blog_Post.png)
+![Blog Post](docs/mobile_BlogPost.png)
 
 **CV** 
 
-![CV](docs/Mobile_CV.png)
+![CV](docs/mobile_CV.png)
 
 **Contact Me** 
 
-![Contact Me](docs/Mobile_Contact.png)
+![Contact Me](docs/mobile_contact.png)
 
 
 
