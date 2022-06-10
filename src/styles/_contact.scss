@@ -1,0 +1,54 @@
+// contact me page
+.contact-box {
+    @include column_center;
+
+    .contact-form {
+        width: 40%;
+        margin: 1rem 5rem 5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        button {
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        #input-name {
+            height: 30px;
+        }
+        #input-email {
+            height: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 800px) {
+            width: 70%;
+            height: auto;
+            font-size: 2em;
+        }
+            input::placeholder {
+                font-size: 1.5em;
+            }
+            textarea::placeholder {
+                font-size: 1.5em;
+            }
+        }
+
+        #input-message {
+            height: 300px;
+        }
+    }
+
+    form {
+        button {
+            background-color: $primary1;
+            margin: 0.5em 0em;
+
+        }
+
+        button:hover {
+            background-color: $primary2;
+        }
+    }

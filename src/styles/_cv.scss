@@ -1,0 +1,54 @@
+/* CV 
+download as pdf */
+div {
+    form {
+        display: flex;
+        justify-content: flex-end;
+
+        .button {
+            background-color: $primary1;
+            padding: 0.5vw;
+            border-radius: 20%;
+            border: none;
+            margin: 2vw;
+            cursor: pointer;
+        }
+    }
+
+    button:hover {
+        background-color: $primary2;
+    }
+}
+
+h2 {
+    margin: 1vw;
+    color: $primary2;
+    text-shadow: 1px 1px $primary4;
+}
+
+
+// CV
+section.cv {
+    padding: 0.3vw;
+    margin-bottom: 2vw;
+
+    h2 {
+        margin-top: vw;
+    }
+
+    li {
+        margin: 0 2vw;
+    }
+
+    p {
+        margin: 0 1vw;
+    }
+}
+
+// table rules
+td {
+    padding-left: 1vw;
+
+}
+tr td:nth-child(odd) {
+    white-space: nowrap;}
